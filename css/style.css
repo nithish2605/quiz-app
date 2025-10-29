@@ -1,0 +1,7 @@
+:root{
+      font-family: "Cabin", sans-serif !important;
+      --bg-violet:#1c1a5e !important;
+}
+.bg-violet{
+    background-color: var(--bg-violet) !important;
+}
