@@ -10,7 +10,7 @@
     <!-- bootstrap js here -->
     <script src="js/bootstrap.min.js"></script>
     <!-- custom css here -->
-     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- fontawesome cdn here -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -20,11 +20,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
-        <style>
-            .quiz-container{
-                width: 600px;
-            }
-        </style>
+    <style>
+        .quiz-container {
+            width: 600px;
+            border-radius:1.2rem;
+        }
+
+        .options-card {
+            background-color: #ffffff;
+            border-radius: 1.2rem;
+            cursor: pointer;
+        }
+        .options-card:hover{
+            background-color: #b8b6b6;
+        }
+
+        .quiz-container{
+            border-radius: 1.2 re,;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,18 +47,32 @@
         <div class="container-fluid">
             <a class="navbar-brand fs-2 fw-bold">Quiz World</a>
             <div class="d-flex">
-                
+
             </div>
         </div>
     </nav>
     <!-- navbar ends here -->
 
     <!-- question starts section here -->
-     <div class="container quiz-container d-flex justify-content-center align-items-center bg-violet mt-5 ">
-        <h2 class="text-light fw-bold my-4">What is known as html ?</h2>
-     </div>
+    <div class="container quiz-container d-flex justify-content-center align-items-center bg-violet mt-3">
+        <div class="col-12">
+            <div class="row">
+                <p class="text-info text-center mt-5">Questions 3 Out of 20</p>
+                <h2 class="text-light text-center fw-bold mt-1" id="question">What is known as html ?</h2>
+                <ul class="list-unstyled text-center p-4">
+                    <li class="options-card p-3 mb-4" id="option-1">Hyper text markup language</li>
+                    <li class="options-card p-3 mb-4" id="option-2">Hyper the language</li>
+                    <li class="options-card p-3 mb-4" id="option-3">Hyper only language</li>
+                    <li class="options-card p-3" id="option-4">none of these</li>
+                </ul>
+                <h4 class="text-light d-flex justify-content-end mb-5 fw-bold pe-4" id="next-btn" style="cursor: pointer;">Next</h4>
+            </div>
+        </div>
+    </div>
     <!-- question ends section here -->
-
+ 
+<!-- main js here -->
+ <script src="js/main.js"></script>
 </body>
 
 </html>
