@@ -54,11 +54,12 @@ let Question_Sets = [
     }
 ];
 
+//making next button active once any option is clicked
 function enable_nxtbtn() {
-    //making next button active once any option is clicked
     next_btn.style.pointerEvents = 'auto';
     next_btn.style.opacity = 1;
 }
+//to disable next btn 
 function disable_nxtbtn() {
     next_btn.style.pointerEvents = 'none';
     next_btn.style.opacity = 0.5;

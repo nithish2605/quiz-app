@@ -1,7 +1,30 @@
-:root{
-      font-family: "Cabin", sans-serif !important;
-      --bg-violet:#1c1a5e !important;
+:root {
+    font-family: "Cabin", sans-serif !important;
+    --bg-violet: #1c1a5e !important;
 }
-.bg-violet{
+
+.bg-violet {
     background-color: var(--bg-violet) !important;
+}
+
+.quiz-container {
+    width: 600px;
+    height: calc(100vh - 100px) ;
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+.options-card {
+    background-color: #ffffff;
+    /* color: #000; */
+    border-radius: 1.2rem;
+    cursor: pointer;
+}
+
+.options-card:hover {
+    background-color: #b8b6b6;
+}
+
+.quiz-container {
+    border-radius: 1.2rem;
 }

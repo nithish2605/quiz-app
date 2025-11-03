@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz World</title>
+    <title>Score Board</title>
     <!-- bootstrap css cdn here -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap js here -->
@@ -37,23 +37,27 @@
     <!-- question starts section here -->
     <div class="container quiz-container d-flex justify-content-center align-items-center bg-violet mt-1">
         <div class="col-12">
-            <div class="row">
-                <p class="text-info text-center mt-5">Questions <span id="cur-ques" class="mx-2"></span> Out of <span id="total-ques" class="mx-2"></span></p>
-                <h2 class="text-light text-center fw-bold mt-1" id="question"></h2>
-                <ul class="list-unstyled text-center p-4">
-                    <li class="options-card p-3 mb-4" id="option-1"></li>
-                    <li class="options-card p-3 mb-4" id="option-2"></li>
-                    <li class="options-card p-3 mb-4" id="option-3"></li>
-                    <li class="options-card p-3" id="option-4"></li>
-                </ul>
-                <h4 class="text-light d-flex justify-content-end mb-5 fw-bold pe-4" id="next-btn" style="cursor: pointer;">Next</h4>
+            <div class="row text-center text-light">
+                <h1 class="fw-bold mt-1" id="question">Congrats !</h1>
+                <h3 class="mt-4">You Score</h3>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6">
+                        <h1 class="mt-2">18 / 20</h1>
+                    </div>
+                    <div class="col-6">
+                        <h3>+90 points</h3>
+                    </div>
+                </div>
+                <div>
+                    <img class="img-fluid" src="assets/images/trophy-3d-image.png" alt="">
+                </div>
             </div>
         </div>
     </div>
     <!-- question ends section here -->
- 
-<!-- main js here -->
- <script src="js/main.js"></script>
+
+    <!-- main js here -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
