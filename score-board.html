@@ -38,18 +38,18 @@
     <div class="container quiz-container d-flex justify-content-center align-items-center bg-violet mt-1">
         <div class="col-12">
             <div class="row text-center text-light">
-                <h1 class="fw-bold mt-1" id="question">Congrats !</h1>
+                <h1 class="fw-bold mt-1 display-4" id="question">Congrats !</h1>
                 <h3 class="mt-4">You Score</h3>
                 <div class="row justify-content-center align-items-center">
                     <div class="col-6">
-                        <h1 class="mt-2">18 / 20</h1>
-                    </div>
-                    <div class="col-6">
-                        <h3>+90 points</h3>
+                        <h1 class="mt-2"><span id="crct-ans"></span> / <span id="tot-q"></span></h1>
                     </div>
                 </div>
-                <div>
-                    <img class="img-fluid" src="assets/images/trophy-3d-image.png" alt="">
+                <div class="trophy-image">
+                    <img class="img-fluid" src="assets/images/orange-trophy.png" alt="trophhy image">
+                </div>
+                <div class="mt-4 fs-4">
+                    <a href="index.html" class=" play-again-btn text-decoration-none text-light p-2 px-5">Play again</a>
                 </div>
             </div>
         </div>
@@ -58,6 +58,23 @@
 
     <!-- main js here -->
     <script src="js/main.js"></script>
+    <script>
+        const score = localStorage.getItem('score');
+        const total = localStorage.getItem('total');
+        if (score && total) {
+            document.querySelector('#crct-ans').textContent = `${score} `;
+            document.querySelector('#tot-q').innerHTML = `${total}`;
+        } else {
+            document.getElementById('score-display').textContent = "No data found!";
+        }
+
+        // ✅ Restart button
+        function restartQuiz() {
+            localStorage.removeItem('score');
+            localStorage.removeItem('total');
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
 
 </html>

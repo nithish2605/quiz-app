@@ -10,6 +10,10 @@ var next_btn = document.querySelector('#next-btn');
 var display_curQues_no = document.querySelector('#cur-ques');
 var display_totalQues_no = document.querySelector('#total-ques');
 
+var no_of_crctans = document.querySelector('#crct-ans');
+var tot_ques = document.querySelector('#tot-q');
+
+let crct_ans_tracker = 0;
 //Questions sets here
 let Question_Sets = [
     {
@@ -69,7 +73,8 @@ disable_nxtbtn();
 //displaying curQues no and total Ques no 
 let Curr_Ques = 0;
 display_curQues_no.innerHTML = Curr_Ques + 1;
-display_totalQues_no.innerHTML = Question_Sets.length;
+display_totalQues_no.innerHTML = Question_Sets.length; //for all pages
+tot_ques = Question_Sets.length;//for final score board
 
 //function to display questions and answers
 function showques(Curr_Ques) {
@@ -85,7 +90,6 @@ all_options.forEach(option => {
     //once clicked making options not clickable
     option.addEventListener('click', () => {
         enable_nxtbtn();
-
         all_options.forEach(opt => {
             opt.style.pointerEvents = 'none';
         });
@@ -95,6 +99,8 @@ all_options.forEach(option => {
         if (option.textContent.trim() == correctanswer) {
             option.style.backgroundColor = '#008000';
             option.style.color = "#ffffff";
+            crct_ans_tracker = crct_ans_tracker + 1;
+            no_of_crctans.innerHTML = crct_ans_tracker;
         }
         //if clicked option is correct
         else {
@@ -107,7 +113,6 @@ all_options.forEach(option => {
                 }
             });
         }
-
     });
 });
 
@@ -121,7 +126,9 @@ next_btn.addEventListener('click', () => {
         reset();
     }
     else {
-        alert("All questions over");
+        localStorage.setItem('score',crct_ans_tracker);
+        localStorage.setItem('total',tot_ques);
+        window.location.href = "score-board.html";
     }
 });
 
