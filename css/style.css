@@ -9,16 +9,17 @@
 
 .quiz-container {
     width: 600px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 10px);
     border-radius: 1.2rem;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
-@media (min-width:400px) and (max-width:576px) {
+@media (min-width:350px) and (max-width:576px) {
     .quiz-container {
-        width: 380px;
-        height: calc(100vh - 150px);
-        overflow-y: hidden;
+        width: 330px;
+        /* height:84vh; */
+    height: calc(100vh - 10px);
+
     }
 }
 
