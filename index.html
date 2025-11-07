@@ -37,23 +37,52 @@
     <!-- question starts section here -->
     <div class="container quiz-container d-flex justify-content-center align-items-center bg-violet mt-1">
         <div class="col-12">
-            <div class="row">
-                <p class="text-info text-center mt-5">Questions <span id="cur-ques" class="mx-2"></span> Out of <span id="total-ques" class="mx-2"></span></p>
-                <h2 class="text-light text-center fw-bold mt-1" id="question"></h2>
-                <ul class="list-unstyled text-center p-4">
-                    <li class="options-card p-3 mb-4" id="option-1"></li>
-                    <li class="options-card p-3 mb-4" id="option-2"></li>
-                    <li class="options-card p-3 mb-4" id="option-3"></li>
-                    <li class="options-card p-3" id="option-4"></li>
-                </ul>
-                <h4 class="text-light d-flex justify-content-end mb-5 fw-bold pe-4" id="next-btn" style="cursor: pointer;">Next</h4>
+            <h1 class="text-light text-center mb-5">Please select Your Question Category</h1>
+            <div class="selection d-flex justify-content-center">
+                <select class="form-select w-75" id="inputGroupSelect02">
+                    <option selected>--Select Question type--</option>
+                    <option value="programming" class="ques-types">Programming</option>
+                    <option value="gk" class="ques-types">General knowledge</option>
+                    <option value="s        cience" class="ques-types">Science</option>
+                    <option value="history" class="ques-types">history</option>
+                    <option value="geography" class="ques-types">geography</option>
+                    <option value="sports" class="ques-types">sports</option>
+                    <option value="literature" class="ques-types">literature</option>
+                    <option value="movies" class="ques-types">movies</option>
+                    <option value="music" class="ques-types">music</option>
+                    <option value="art" class="ques-types">art</option>
+                </select>
+            </div>
+            <div class="mt-5 fs-4 text-center">
+                <button class="play-again-btn text-decoration-none text-light p-2 px-5">Start Quiz</button>
             </div>
         </div>
     </div>
     <!-- question ends section here -->
- 
-<!-- main js here -->
- <script src="js/main.js"></script>
+
+    <!-- main js here -->
+    <script src="js/main.js"></script>
+    <script>
+        //selecting category
+        if (document.querySelectorAll('.ques-types').length > 0) {
+            document.querySelectorAll('.ques-types').forEach(ques_cat => {
+                ques_cat.addEventListener('click', () => {
+                    localStorage.setItem('Question_category', ques_cat.value);
+                });
+                
+                document.querySelector('button').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    console.log(ques_cat.value);
+                    if (!ques_cat) {
+                        alert("please select category");
+                    }
+                    else {
+                        window.location.href = "ques.html";
+                    }
+                })
+            });
+        }
+    </script>
 </body>
 
 </html>

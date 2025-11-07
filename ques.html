@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz World</title>
+    <!-- bootstrap css cdn here -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap js here -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- custom css here -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- fontawesome cdn here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font linking here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- navbar starts here -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-2 fw-bold">Quiz World.</a>
+            <div class="d-flex">
+
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ends here -->
+
+    <!-- question starts section here -->
+    <div class="container quiz-container d-flex justify-content-center align-items-center bg-violet mt-1">
+        <div class="col-12">
+            <div class="row">
+                <p class="text-info text-center mt-sm-5 mt-0">Questions <span id="cur-ques" class="mx-2"></span> Out of <span id="total-ques" class="mx-2"></span></p>
+                <h2 class="text-light text-center fw-bold mt-1" id="question"></h2>
+                <ul class="list-unstyled text-center p-4">
+                    <li class="options-card p-3 mb-4" id="option-1"></li>
+                    <li class="options-card p-3 mb-4" id="option-2"></li>
+                    <li class="options-card p-3 mb-4" id="option-3"></li>
+                    <li class="options-card p-3" id="option-4"></li>
+                </ul>
+                <h4 class="text-light d-flex justify-content-end mb-5 fw-bold pe-4" id="next-btn" style="cursor: pointer;">Next</h4>
+            </div>
+        </div>
+    </div>
+    <!-- question ends section here -->
+ 
+<!-- main js here -->
+ <script src="js/main.js"></script>
+</body>
+
+</html>
