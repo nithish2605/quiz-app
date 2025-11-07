@@ -1,3 +1,4 @@
+
 //storing all the values
 var display_Question = document.querySelector('#question');
 var display_Option_1 = document.querySelector('#option-1');
@@ -442,6 +443,7 @@ function disable_nxtbtn() {
 }
 disable_nxtbtn();
 
+
 const selected_cat = localStorage.getItem('Question_category');
 const Question_Sets = Question_Sets_All[selected_cat];
 
@@ -505,6 +507,7 @@ next_btn.addEventListener('click', () => {
         localStorage.setItem('score', crct_ans_tracker);
         localStorage.setItem('total', tot_ques);
         window.location.href = "score-board.html";
+        localStorage.removeItem('Question_category');
     }
 });
 

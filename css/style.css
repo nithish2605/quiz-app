@@ -17,7 +17,7 @@
 @media (min-width:400px) and (max-width:576px) {
     .quiz-container {
         width: 380px;
-        height: calc(100vh - 280px);
+        height: calc(100vh - 150px);
         overflow-y: hidden;
     }
 }
@@ -37,7 +37,7 @@
     border-radius: 1.2rem;
 }
 
-.play-again-btn {
+.play-again-btn , .start-btn{
     background-color: #41e5ed;
     border-radius: 2rem;
 }

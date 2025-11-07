@@ -37,13 +37,14 @@
     <!-- question starts section here -->
     <div class="container quiz-container d-flex justify-content-center align-items-center bg-violet mt-1">
         <div class="col-12">
+            <h1 class="text-light text-center display-4 mb-4">Quiz World.</h1>
             <h1 class="text-light text-center mb-5">Please select Your Question Category</h1>
             <div class="selection d-flex justify-content-center">
                 <select class="form-select w-75" id="inputGroupSelect02">
-                    <option selected>--Select Question type--</option>
+                    <option value="" class="ques-types" selected>--Select Question type--</option>
                     <option value="programming" class="ques-types">Programming</option>
                     <option value="gk" class="ques-types">General knowledge</option>
-                    <option value="s        cience" class="ques-types">Science</option>
+                    <option value="science" class="ques-types">Science</option>
                     <option value="history" class="ques-types">history</option>
                     <option value="geography" class="ques-types">geography</option>
                     <option value="sports" class="ques-types">sports</option>
@@ -53,8 +54,11 @@
                     <option value="art" class="ques-types">art</option>
                 </select>
             </div>
-            <div class="mt-5 fs-4 text-center">
-                <button class="play-again-btn text-decoration-none text-light p-2 px-5">Start Quiz</button>
+            <div class="text-center">
+            <img class="img-fluid h-25 w-25 text-center" src="assets/3dicons-target.png" alt="">
+            </div>
+            <div class="fs-4 text-center">
+                <button class="start-btn text-decoration-none text-light p-2 px-5">Start Quiz</button>
             </div>
         </div>
     </div>
@@ -63,25 +67,23 @@
     <!-- main js here -->
     <script src="js/main.js"></script>
     <script>
-        //selecting category
-        if (document.querySelectorAll('.ques-types').length > 0) {
-            document.querySelectorAll('.ques-types').forEach(ques_cat => {
-                ques_cat.addEventListener('click', () => {
-                    localStorage.setItem('Question_category', ques_cat.value);
-                });
-                
-                document.querySelector('button').addEventListener('click', (e) => {
-                    e.preventDefault();
-                    console.log(ques_cat.value);
-                    if (!ques_cat) {
-                        alert("please select category");
-                    }
-                    else {
-                        window.location.href = "ques.html";
-                    }
-                })
-            });
-        }
+        const select = document.querySelector('#inputGroupSelect02');
+        const startbtn = document.querySelector('.start-btn');
+
+        select.addEventListener('change',()=>{
+           
+        })
+
+        startbtn.addEventListener('click',(e)=>{
+            e.preventDefault();
+            const selected = select.value && select.value.trim();
+            if(!selected){
+                alert("please select a category first");
+                return;
+            }
+            localStorage.setItem('Question_category',selected);
+            window.location.href = 'ques.html';
+        });
     </script>
 </body>
 
