@@ -16,9 +16,10 @@
 
 @media (min-width:350px) and (max-width:576px) {
     .quiz-container {
-        width: 330px;
-        /* height:84vh; */
-    height: calc(100vh - 198px);
+        width: 90%;
+        height: calc(100vh - 198px);
+    border-radius: 1rem;
+
 
     }
 }
