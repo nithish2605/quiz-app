@@ -18,7 +18,7 @@
     .quiz-container {
         width: 330px;
         /* height:84vh; */
-    height: calc(100vh - 10px);
+    height: calc(100vh - 198px);
 
     }
 }
@@ -41,4 +41,20 @@
 .play-again-btn , .start-btn{
     background-color: #41e5ed;
     border-radius: 2rem;
+}
+
+.target-img{
+    animation: float 3.5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(-18%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
 }
